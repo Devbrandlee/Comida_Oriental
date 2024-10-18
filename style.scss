@@ -1,0 +1,209 @@
+
+
+$cor-de-fundo-caixas: #f8f5f2;
+
+//@mixin permite que você faça grupos de declarações css
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+// @mixin nome{}
+// @include nomdeDoMixin
+
+@mixin estilo-buttom {
+  background-color: #ff0000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  //1 valor top, bottom.
+  //2 para esquerda e direita.
+  margin: 0 10%;
+}
+
+header {
+  @include flexbox(); /* Inclui o mixin para display flex */
+  height: 10vh; /* Define a altura do header */
+
+  ul {
+    @include flexbox(); /* Flexbox para alinhar os itens do menu */
+    width: 30vw;
+    list-style: none; /* Remove as bolinhas da lista */
+  }
+
+  ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: inherit; /* Usa a cor padrão do tema */
+    font-weight: bold; /* (negrito) */
+    padding: 0.5rem 1rem; /* Adiciona espaçamento ao redor dos itens */
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+  }
+
+  ul li a:hover {
+    background-color: #f0f0f0; /* Altera a cor de fundo ao passar o mouse */
+    color: #333; /* Define a cor do texto ao passar o mouse */
+    border-radius: 5px; /* Opcional: bordas arredondadas */
+  }
+}
+
+
+
+button {
+  @include estilo-buttom();
+  transition: transform 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+  
+
+
+.cardapio {
+  @include estilo-buttom();
+
+  margin-top: 2rem;
+}
+
+.cardapio:hover {
+  transform: scale(1.2);
+  transition: transform 0,4s ease-in-out;
+}
+
+
+
+.primeiraSessao {
+  @include flexbox();
+
+  div {
+    height: 22vh;
+    @include flexbox();
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30vw;
+  }
+
+  h1{
+    margin-top: 1 rem;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    margin-top: 4rem;
+    width: 22%;
+  }
+}
+
+
+
+.segundaSessao{
+  @include flexbox();
+
+  div {
+    height: 22vh;
+    @include flexbox();
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30vw;
+  }
+
+  img{
+    margin-top: 7rem;
+width: 31%;
+
+  }
+  h6{
+    margin-bottom: 1rem;
+    color:red;
+  }
+  h2{
+    margin-bottom: 1rem;
+  }
+}
+
+.terceiraSessao {
+  
+  text-align: center;
+  h2{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.sessaoCards{
+    @include flexbox();
+    
+    div{
+        background-color: #f8f5f2;
+        width: 25vw;
+        
+        border-radius: 10px;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &:hover {
+            scale: 1.2;
+            background-color: rgba(236, 196, 141, 0.841);
+          }
+    }
+
+    img{
+        width: 17vw;
+        position: relative;
+        margin-top: 4rem;
+        bottom: 50px;
+    }
+
+    p{
+        padding: 20px 0;
+    }
+
+
+  }
+  
+
+
+  footer {
+    margin: 10px 0;
+    margin-top: 10rem; /* Controla a posição do footer na tela */
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex; /* Coloca os itens lado a lado */
+    justify-content: space-between; /* Distribui os itens uniformemente */
+    width: 50%; /* Ajuste a largura conforme necessário */
+    margin: 0 auto; /* Centraliza a ul no footer */
+    padding: 0; /* Remove o espaçamento padrão da ul */
+    
+  }
+
+  ul li {
+    margin: 0 1rem; /* Adiciona espaçamento entre os itens */
+    font-weight: bold; /* Ajusta o peso da fonte dos itens */
+  }
+
+  footer ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do texto do pai, mantendo a cor do tema do site */
+    font-weight: bold; /* Opcional: Deixa a fonte em negrito */
+  }
+  
+  footer ul li a:hover {
+    color: #f0f0f0; /* Define a cor do texto ao passar o mouse */
+    background-color: #333; /* Define uma cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Opcional: Deixa os cantos arredondados */
+  }

@@ -1,5 +1,4 @@
 
-
 $cor-de-fundo-caixas: #f8f5f2;
 
 //@mixin permite que você faça grupos de declarações css
@@ -125,6 +124,7 @@ width: 31%;
   h6{
     margin-bottom: 1rem;
     color:red;
+    font-size: 1.2rem;
   }
   h2{
     margin-bottom: 1rem;
@@ -145,10 +145,10 @@ width: 31%;
     
     div{
         background-color: #f8f5f2;
-        width: 25vw;
+        width: 31%;
         
         border-radius: 10px;
-        padding: 0px 30px;
+        padding: 0px 1px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -160,7 +160,7 @@ width: 31%;
     }
 
     img{
-        width: 17vw;
+        width: 10vw;
         position: relative;
         margin-top: 4rem;
         bottom: 50px;
@@ -173,7 +173,6 @@ width: 31%;
 
   }
   
-
 
   footer {
     margin: 10px 0;
@@ -207,3 +206,15 @@ width: 31%;
     background-color: #333; /* Define uma cor de fundo ao passar o mouse */
     border-radius: 5px; /* Opcional: Deixa os cantos arredondados */
   }
+
+@media (max-width: 700px) {
+  ul {
+    display: block; /* Empilha os itens verticalmente */
+    width: 100%; /* Faz a largura ocupar 100% */
+  }
+
+  ul li {
+    margin: 0.5rem 0; /* Adiciona margem vertical entre os itens */
+    text-align: center; /* Centraliza o texto dentro do li */
+  }
+}

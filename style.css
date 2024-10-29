@@ -107,6 +107,7 @@ button:hover {
 .segundaSessao h6 {
   margin-bottom: 1rem;
   color: red;
+  font-size: 1.2rem;
 }
 .segundaSessao h2 {
   margin-bottom: 1rem;
@@ -127,9 +128,9 @@ button:hover {
 }
 .sessaoCards div {
   background-color: #f8f5f2;
-  width: 25vw;
+  width: 31%;
   border-radius: 10px;
-  padding: 0px 30px;
+  padding: 0px 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,7 +140,7 @@ button:hover {
   background-color: rgba(236, 196, 141, 0.841);
 }
 .sessaoCards img {
-  width: 17vw;
+  width: 10vw;
   position: relative;
   margin-top: 4rem;
   bottom: 50px;
@@ -178,4 +179,15 @@ footer ul li a:hover {
   color: #f0f0f0; /* Define a cor do texto ao passar o mouse */
   background-color: #333; /* Define uma cor de fundo ao passar o mouse */
   border-radius: 5px; /* Opcional: Deixa os cantos arredondados */
+}
+
+@media (max-width: 700px) {
+  ul {
+    display: block; /* Empilha os itens verticalmente */
+    width: 100%; /* Faz a largura ocupar 100% */
+  }
+  ul li {
+    margin: 0.5rem 0; /* Adiciona margem vertical entre os itens */
+    text-align: center; /* Centraliza o texto dentro do li */
+  }
 }/*# sourceMappingURL=style.css.map */
